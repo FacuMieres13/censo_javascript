@@ -1,0 +1,210 @@
+* {
+    margin:0;
+    padding:0;
+    font-family: "Inter", sans-serif;
+}
+
+#contenedor {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  #cabezal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+  }
+  
+  #logo {
+    height: 50px;
+  }
+  
+  #navPrincipal {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+  }
+  
+  #navPrincipal li {
+    display: inline;
+  }
+  
+  #navPrincipal li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  #navPrincipal li a:hover {
+    background-color: #6C66AC;
+    color: #fff;
+  }
+  
+  .btn {
+    cursor: pointer;
+  }
+  
+  .aux {
+    margin-left: 20px;
+  }
+  
+  .aux a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .aux a:hover {
+    background-color: #6C66AC;
+    color: #fff;
+  }
+  
+  .invitado a {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+  }
+  
+  .invitado a:hover {
+    background-color: #6C66AC;
+    color: #fff;
+  }
+  
+  .censista a {
+    background-color: #e9ecef;
+    border: 1px solid #ddd;
+  }
+  
+  .censista a:hover {
+    background-color: #6C66AC;
+    color: #fff;
+  }
+  #btnSeccionCerrarSesion a {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  #btnSeccionCerrarSesion a:hover {
+    background-color: #c82333;
+  }
+  .seccion {
+    margin-bottom: 40px;
+  }
+  
+  .seccion h1 {
+    font-size: 24px;
+    color: #333;
+    border-bottom: 2px solid #6C66AC;
+    padding-bottom: 10px;
+  }
+  
+  .seccion input[type="text"],
+  .seccion input[type="password"],
+  .seccion input[type="button"],
+  .seccion select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  .seccion input[type="button"] {
+    background-color: #6C66AC;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .seccion input[type="button"]:hover {
+    background-color: #0056b3;
+  }
+  
+  .seccion p {
+    color: #ff0000;
+    font-size: 14px;
+  }
+  
+  #seccionFormCenso label {
+    font-weight: bold;
+  }
+  
+  #seccionFormCenso input[readonly],
+  #seccionFormCenso select[style="pointer-events: none"] {
+    background-color: #f0f0f0;
+  }
+  .seccion table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  .seccion table th,
+  .seccion table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .seccion table th {
+    background-color: #6C66AC;
+    color: #fff;
+  }
+  
+  .seccion table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .seccion table tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  @media (max-width: 768px) {
+    #contenido {
+      padding: 10px;
+    }
+    .seccion input[type="text"],
+    .seccion input[type="password"],
+    .seccion input[type="button"],
+    .seccion select {
+      padding: 8px;
+      font-size: 14px;
+    }
+  
+    .seccion table th,
+    .seccion table td {
+      padding: 8px;
+      font-size: 14px;
+    }
+  
+    .seccion h1 {
+      font-size: 20px;
+    }
+    #cabezal {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    
+      #navPrincipal {
+        flex-direction: column;
+        gap: 10px;
+      }
+    
+      .aux {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+  }

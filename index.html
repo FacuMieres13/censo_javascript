@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="contenedor">
+        <div id="cabezal" class="clearfix">
+            <img id="logo" src="https://p1.develotion.com/2023_03/logo.jpg" alt="logo" />
+            <ul id="navPrincipal">
+                <li id="btnSeccionIniciarSesion" class="btn invitado">
+                    <a>Iniciar Sesión</a>
+                </li>
+                <li id="btnSeccionRegistrarUsuario" class="btn invitado">
+                    <a>Registrarse</a>
+                </li>
+                <li id="btnSeccionRealizarCenso" class="btn censista invitado">
+                    <a>Realizar censo</a>
+                </li>
+                <li id="btnSeccionBuscarCenso" class="btn censista">
+                    <a>Buscar Censo</a>
+                </li>
+                <li id="btnSeccionReasignarCensista" class="btn censista">
+                    <a>Reasignar censista</a>
+                </li>
+                <li id="btnSeccionEliminarCenso" class="btn censista">
+                    <a>Eliminar Censo</a>
+                </li>
+                <li id="btnSeccionCerrarSesion" class="btn censista">
+                    <a>Cerrar Sesión</a>
+                </li>
+            </ul>
+            <div class="aux">
+                <a class="btn invitado" id="btnSeccionEstadisticaInv">Estadisticas</a>
+            </div>
+            <div class="aux">
+                <a class="btn censista" id="btnSeccionEstadisticaCensista">Estadisticas</a>
+            </div>
+            <!-- FIN AUX -->
+        </div>
+        <!-- FIN CABEZAL -->
+        <div id="contenido">
+            <div id="seccionRegistrarUsuario" class="seccion">
+                <h1>Registrarse</h1>
+                <input type="text" id="txtNombre" placeholder="Nombre" />
+                <input type="text" id="txtNombreUsuario" placeholder="Usuario" />
+                <input type="password" id="txtContrasenia" placeholder="Contraseña" />
+                <input type="button" class="registro" id="btnRegistrarse" value="Registrarse" /><br />
+                <p id="pMensaje"></p>
+            </div>
+            <div id="seccionIniciarSesion" class="seccion">
+                <h1>Iniciar Sesión</h1>
+                <input type="text" id="txtNombreUsuarioLogin" placeholder="Usuario" />
+                <input type="password" id="txtContraseniaLogin" placeholder="Contraseña" />
+                <input type="button" class="login" id="btnIniciarSesion" value="Iniciar Sesión" />
+                <p id="pMensajeSesion"></p>
+            </div>
+            <div id="seccionRealizarCenso" class="seccion">
+                <h1>Realizar censo</h1>
+                <input type="text" id="txtCedulaCenso" name="cedula" placeholder="Cédula" /><br />
+                <input type="text" id="txtNombreCenso" name="Nombre" placeholder="Nombre" /><br />
+                <input type="text" id="txtApellidoCenso" name="Apellido" placeholder="Apellido" /><br />
+                <input type="text" id="txtEdadCenso" name="Edad" placeholder="Edad" /><br />
+                <select name="Departamento" id="slcDepartamento">
+                    <option value="0">Seleccione departamento</option>
+                </select><br />
+                <select name="Ocupacion" id="slcOcupacion">
+                    <option value="0">Seleccione Ocupación</option>
+                    <option value="Dependiente">Dependiente</option>
+                    <option value="Independiente">Independiente</option>
+                    <option value="Estudiante">Estudiante</option>
+                    <option value="No trabaja">No trabaja</option>
+                </select><br />
+                <input type="button" class="registro" id="btnRegistrarCenso" value="Registrar Censo"
+                    name="Registrar Censo" /><br />
+                <p id="pMensajeCenso"></p>
+            </div>
+            <div id="seccionBuscarCenso" class="seccion">
+                <h1>Buscar Censo</h1>
+                <input type="text" name="Buscar Censo" placeholder="Cédula" id="txtBuscarCenso" />
+                <input type="button" id="btnBuscarCenso" value="Buscar Censo" />
+                <hr />
+                <div id="seccionFormCenso" class="seccion">
+                    <label for="txtCedulaCensoB">Cédula</label>
+                    <input type="text" readonly id="txtCedulaCensoB" name="cedula" placeholder="Cédula" /><br />
+                    <label for="txtNombreCensoB">Nombre</label>
+                    <input type="text" readonly id="txtNombreCensoB" name="Nombre" placeholder="Nombre" /><br />
+                    <label for="txtApellidoCensoB">Apellido</label>
+                    <input type="text" readonly id="txtApellidoCensoB" name="Apellido" placeholder="Apellido" /><br />
+                    <label for="txtEdadCensoB">Edad</label>
+                    <input type="text" readonly id="txtEdadCensoB" name="Edad" placeholder="Edad" /><br />
+                    <label for="slcDepartamentoB">Departamento</label>
+                    <select name="Departamento" id="slcDepartamentoB" style="pointer-events: none">
+                        <option value="0">Seleccione departamento</option>
+                    </select><br />
+                    <label for="slcOcupacionB">Ocupación</label>
+                    <select name="Ocupacion" id="slcOcupacionB" style="pointer-events: none">
+                        <option value="0">Seleccione Ocupación</option>
+                        <option value="Dependiente">Dependiente</option>
+                        <option value="Independiente">Independiente</option>
+                        <option value="Estudiante">Estudiante</option>
+                        <option value="No trabaja">No trabaja</option>
+                    </select><br />
+                    <input type="button" id="btnValidarCenso" value="Validar Censo" />
+                </div>
+                <p id="pMensajeBuscado"></p>
+            </div>
+            <div id="seccionReasignarCensista" class="seccion">
+                <h1>Reasignar Censista</h1>
+                <label for="slcPersonas">Persona:</label>
+                <select id="slcPersonas"></select>
+                <label for="slcCensistas">Censista:</label>
+                <select id="slcCensistas"></select>
+                <input type="button" id="btnReasignarCensista" value="Reasignar" />
+                <p id="pMensajeReasignar"></p>
+            </div>
+            <div id="seccionEliminarCenso" class="seccion">
+                <h1>Eliminar Censo</h1>
+                <input type="text" name="Buscar Censo" placeholder="Cédula" id="txtBuscarCensoEliminar" />
+                <input type="button" id="btnBuscarCensoEliminar" value="Eliminar Censo" />
+                <p id="pMensajeEliminar"></p>
+            </div>
+            <div id="seccionEstadisticaInv" class="seccion">
+                <h1>Estadisticas</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Departamento</th>
+                            <th>Estudian</th>
+                            <th>No trabajan</th>
+                            <th>Dependientes o independientes</th>
+                            <th>Porcentaje del total de censados</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tblEstadisticasInv"></tbody>
+                </table>
+            </div>
+            <div id="seccionEstadisticaCensista" class="seccion">
+                <h1>Estadisticas</h1>
+                <div id="estadisticasContent1">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Total personas censadas</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tblTotalPersonas"></tbody>
+                    </table>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Pendientes por validar</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tblPersonasPendientes"></tbody>
+                    </table>
+                </div>
+                <hr />
+                <h2>Censados:</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Departamento</th>
+                            <th>Cantidad de personas</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tblPersonasPorDep"></tbody>
+                </table>
+                <hr />
+                <select id="slcDepEstadistica">
+                    <option value="0">Seleccione departamento</option>
+                </select>
+                <input type="button" id="btnMostrarPorcentajeEdad" value="Mostrar porcentaje" />
+                <p id="PMensajeDepEstad"></p>
+            </div>
+            <!--FIN ELEMENTOS-->
+        </div>
+        <!-- FIN CONTENIDO -->
+        <div id="pie">
+            <a
+                href="https://docs.google.com/document/d/1GLJgzOLrENllNjUduOwyCg4fzf_1nD4BIowpKPwDz7U/edit#heading=h.xil78loyoygg">Facundo
+                Mieres - Mikaela Regalado</a>
+        </div>
+        <!-- FIN PIE -->
+    </div>
+    <!-- FIN CONTENEDOR -->
+    <script src="/script/index.js"></script>
+</body>
+
+</html>
